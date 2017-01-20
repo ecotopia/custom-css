@@ -1,0 +1,77 @@
+/* Move header widgets above banner */
+@media (min-width: 801px) {
+  #topbar { height: 3.2em; margin: 0 auto; z-index: auto; }
+  #branding { overflow: visible; }
+  #header-widget-area { top: -2.8em; max-width: 960px; margin: 0 auto; left:0; right:0; width:auto; height:auto; text-align: right; z-index:500; }
+  #sheader { z-index: 600; }
+  #header-widget-area > ul > li { line-height: inherit; vertical-align: middle; }
+  #header-widget-area select,#header-widget-area input,#header-widget-area button { padding-top: 0; padding-bottom: 0; height: 26px; }
+}
+#header-widget-area > ul { display: inline-block; }
+#header-widget-area > ul > li { display: inline-block; margin:0 0 0 10px; }
+#header-widget-area .searchform:hover:after { background: rgb(61,0,112);}
+
+/* Make navigation half transparent */
+nav#access { opacity: 0.9; z-index:450; }
+.wrapfixed { opacity: 1; }
+#access ul li { background: transparent;  z-index:500;}
+#access ul > li.current_page_item, #access ul > li.current-menu-item, #access ul > li.current_page_ancestor, #access ul > li.current-menu-ancestor { background: rgba(255,255,255,0.3); }
+#access ul li:hover { background: rgba(255,255,255,0.4); }
+@media (min-width: 801px) {
+  nav#access { max-width: 1600px; float: none; position:relative; }
+  .wrapfixed nav#access { margin-top: 0; }
+  #access >.menu { display: flex; justify-content: center; }
+}
+
+/* Limit scaling down of banner on mobile devices */
+#bg_image { width: 100%; margin-left: 50%; transform: translateX(-50%); min-width: 960px; max-width: 1600px; }
+@media(max-width: 530px) { #bg_image#bg_image { width: 181%; min-width: 0; } }
+
+/* Styles on front page */
+#pp-texttop p { margin-bottom: 1.0em; }
+#frontpage .entry-title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.column-image .clickable-column { position: relative; }
+.column-image .clickable-column img { border-radius: 960px; }
+.column-image .clickable-column img:after { content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0; box-shadow: inset 0 0 100px #000; border-radius: 960px; }
+#pp-texttop { padding: 30px 15px; background: transparent }
+#front-columns-box { padding: 30px 15px; background: rgba(220,220,220,0.3); }
+#pp-textmiddle { padding: 0 15px; background: transparent }
+.presentation-page #container { padding: 0 15px; }
+
+/* Variable font size of "Concepts" headings */
+#pp-afterslider h3 { letter-spacing: -1px; font-size: 28px; }
+@media (min-width: 801px) and (max-width: 975px) { #pp-afterslider h3 { font-size: 2.8vw; } }
+@media (min-width: 481px) and (max-width: 667px) { #pp-afterslider h3 { font-size: 4.2vw; } }
+@media (max-width: 350px) { #pp-afterslider h3 { font-size: 8vw; }
+}
+
+/* Open sub-menus of rightermost menu items to the left instead of the right */
+@media (min-width: 801px; ) {
+  #access ul li + li + li + li ul ul { left: auto; right: 100%; }
+}
+
+/* Styles on normal pages */
+#breadcrumbs { margin: 0 auto; max-width: 960px; background: rgba(255,255,255,0.9); }
+#main { max-width: 960px; background: rgba(255,255,255,0.9); }
+#forbottom { padding: 0 15px; }
+#footer { background: transparent; }
+#colophon { padding: 30px 0 0; background: rgba(220,220,220,0.3); }
+#footer .widget-container { padding: 0 15px; background: transparent; }
+#footer .widget-title { background: transparent; }
+#footer2 { padding: 30px 0 0; background: rgba(68,64,109,0.3); }
+#sfooter-full { background: rgba(187,185,204,1); }
+}
+
+/* Styles on mobile devices */
+@media (max-width: 800px; ) {
+  body.custom-background { background-image:none }
+  #header-widget-area select,#header-widget-area input,#header-widget-area button { padding-top: 0; padding-bottom: 0; height: 40px; }
+}
+
+/* Fix menu colours on phones */
+@media (max-width: 600px; ) {
+  #access ul ul li a {color: rgba(255,255,255,1); }
+  #access ul ul li.current_page_item {background: rgba(255,255,255,0.3); }
+  #access ul ul li.current_page_ancestor {background: rgba(255,255,255,0.1); }
+  #access ul ul li:hover { background: rgba(255,255,255,0.1); }
+}
